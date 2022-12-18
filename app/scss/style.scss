@@ -3,20 +3,7 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-
-.header {
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-  }
-
-  &__btn {
-    background-color: white;
-    border-width: 0;
-  }
-}
+@import 'index';
 
 .menu {
   &__list {
@@ -24,8 +11,138 @@
     padding-left: 32.5px;
     padding-right: 61.5px;
   }
+
+  &__list-item:nth-child(n+2) {
+    padding-left: 80px;
+  }
+
+  &__list-link {
+    @include title-font;
+    line-height: 22px;
+    color: rgba(54, 56, 56, 0.9);
+  }
 }
 
 .logo {
   margin: 0 auto;
+}
+
+.footer {
+  &__top {
+    height: 342px;
+    background-color: #DFDFDF;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 61px;
+  }
+
+  &__contact-title {
+    @include title-font;
+    padding-bottom: 14px;
+  }
+
+  &__contact-text {
+    color: #5A5A5A;
+    width: 490px;
+    padding-bottom: 16px;
+  }
+
+  &__contact-email {
+    display: flex;
+    padding-bottom: 22px;
+  }
+
+  &__contact-email-logo {
+    padding-top: 1px;
+    padding-right: 15px;
+  }
+
+  &__contact-email-link {
+    color: #363838;
+    font-weight: 600;
+  }
+
+  &__contact-subscribe-input {
+    border-radius: 21px;
+    border-color: rgba(54, 56, 56, .7);
+    border-width: 1px;
+    width: 378.5px;
+    height: 40px;
+
+    &[type="text"] {
+      padding-left: 18.5px;
+    }
+  }
+
+  &__contact-subscribe-btn {
+    border-radius: 21px;
+    border-width: 0;
+    background-color: #363838;
+    color: #FFFFF0;
+    width: 164.5px;
+    height: 40px;
+    cursor: pointer ;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+
+  }
+
+  &__item-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+
+    &--small {
+      width: 14px;
+      height: 14px;
+    }
+
+    &--medium {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--large {
+      width: 18px;
+      height: 12px;
+    }
+  }
+
+  &__item-link {
+    margin-left: 28px;
+    line-height: 28px;
+    color: #707070;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    width: 28px;
+  }
+
+  &__image-wrapper img {
+    height: 18px;
+    object-fit: contain;
+  }
+
+  &__bottom {
+    display: flex;
+    height: 110px;
+    background-color: #363838;
+  }
+
+  &__bottom-text {
+    margin: auto;
+    line-height: 28px;
+    color: #A1A1A1;
+  }
 }
